@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Video, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,9 +21,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-blue-600 to-orange-500 p-2 rounded-lg">
-              <Video className="h-6 w-6 text-white" />
-            </div>
+            <img
+              src="/efacdad2-dcce-4c1a-9abf-b3337941f074.jpg"
+              alt="Deelink Connect Logo"
+              className="h-10 w-10 object-cover rounded"
+            />
             <div>
               <h1 className={`text-xl font-bold transition-colors ${
                 isScrolled ? 'text-gray-900' : 'text-white'

@@ -1,4 +1,4 @@
-import { Video, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Video, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube,Linkedin} from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -39,6 +39,10 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-green-400" />
                 <span className="text-gray-300">Nigeria & Beyond</span>
               </div>
+              <div className="flex items-center space-x-3">
+                <Instagram className="h-5 w-5 text-red-400" />
+                <span className="text-gray-300">Nigeria & Beyond</span>
+              </div>
             </div>
           </div>
 
@@ -73,10 +77,12 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-6 mb-4 md:mb-0">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">
+              <a
+                href="https://www.instagram.com/raphealidowu_?igsh=MWV5NTdvaGlra3lpdw%3D%3D&utm_source=qr"
+                className="text-gray-400 hover:text-pink-400 transition-colors"
+                target="_blank"
+                rel="noopener"
+              >
                 <Instagram className="h-6 w-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
@@ -84,6 +90,14 @@ const Footer = () => {
               </a>
               <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
                 <Youtube className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rapheal-idowu-67255a6a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                className="text-gray-400 hover:text-blue-600 transition-colors"
+                target="_blank"
+                rel="noopener"
+              >
+                <Linkedin className="h-6 w-6" />
               </a>
             </div>
 

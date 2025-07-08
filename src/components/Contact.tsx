@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageSquare,Instagram,Linkedin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<{
@@ -100,7 +100,38 @@ const Contact: React.FC = () => {
                     </a>
                   </div>
                 </div>
-
+                <div className="flex items-start space-x-4">
+                <div className="bg-pink-100 p-3 rounded-full">
+                  <Instagram className="h-6 w-6 text-pink-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Instagram</h4>
+                    <a
+                      href="https://www.instagram.com/raphealidowu_?igsh=MWV5NTdvaGlra3lpdw%3D%3D&utm_source=qr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-600 hover:text-pink-700 transition-colors"
+                    >
+                      @raphealidowu_
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 p-3 rounded-full">
+                    <Linkedin className="h-6 w-6 text-blue-700" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">LinkedIn</h4>
+                    <a
+                      href="https://www.linkedin.com/in/rapheal-idowu-67255a6a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-700 hover:text-blue-800 transition-colors"
+                    >
+                      rapheal-idowu
+                    </a>
+                  </div>
+                </div>
                 <div className="flex items-start space-x-4">
                   <div className="bg-green-100 p-3 rounded-full">
                     <MapPin className="h-6 w-6 text-green-600" />
