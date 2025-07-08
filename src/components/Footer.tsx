@@ -8,9 +8,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-gradient-to-r from-blue-600 to-orange-500 p-2 rounded-lg">
-                <Video className="h-6 w-6 text-white" />
-              </div>
+              <img
+              src="/efacdad2-dcce-4c1a-9abf-b3337941f074.jpg"
+              alt="Deelink Connect Logo"
+              className="h-10 w-10 object-cover rounded"
+            />
               <div>
                 <h3 className="text-xl font-bold">Deelink Connect</h3>
                 <p className="text-sm text-gray-400">Media Professionals</p>
