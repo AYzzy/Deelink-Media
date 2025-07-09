@@ -1,4 +1,4 @@
-import { Video, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube,Linkedin} from 'lucide-react';
+import { Video, Phone, Mail, MapPin, Facebook, Instagram, Youtube,Linkedin, Twitter} from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -87,10 +87,18 @@ const Footer = () => {
               >
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="https://x.com/raph_id?s=21" 
+              className="text-gray-400 hover:text-blue-400 transition-colors"
+                target="_blank"
+                rel="noopener"
+              >
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
+              <a href="https://m.youtube.com/@RaphealIdowu_MediaBro/streams"
+               className="text-gray-400 hover:text-red-400 transition-colors"
+               target="_blank"
+               rel="noopener"
+               >
                 <Youtube className="h-6 w-6" />
               </a>
               <a
