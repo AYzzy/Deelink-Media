@@ -1,4 +1,38 @@
 import { ArrowRight, Play, Star } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+
+const stats = [
+  { label: 'Events Covered', value: 500, suffix: '+' },
+  { label: 'Verified Pros', value: 200, suffix: '+' },
+  { label: 'States Covered', value: 36 },
+  { label: 'Years Experience', value: 10, suffix: '+' },
+];
+
+const StatCounter: React.FC<{ value: number; suffix?: string; duration?: number }> = ({ value, suffix = '', duration = 800 }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const increment = Math.ceil(value / (duration / 16));
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        setCount(value);
+        clearInterval(interval);
+      } else {
+        setCount(start);
+      }
+    }, 16);
+    return () => clearInterval(interval);
+  }, [value, duration]);
+
+  return (
+    <span>
+      {count}
+      {suffix}
+    </span>
+  );
+};
 
 const Hero = () => {
   return (
@@ -43,37 +77,27 @@ const Hero = () => {
               <span>Book Your Crew Now</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            
-            <button className="group bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center space-x-2">
-              <a href="https://m.youtube.com/@RaphealIdowu_MediaBro/streams"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
-              >
-                <Play className="h-5 w-5" />
-                <span>Watch Demo</span>
-              </a>
-            </button>
+            <a
+              href="https://m.youtube.com/@RaphealIdowu_MediaBro/streams"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
+            >
+              <Play className="h-5 w-5" />
+              <span>Watch Demo</span>
+            </a>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-gray-300 text-sm">Events Covered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">200+</div>
-              <div className="text-gray-300 text-sm">Verified Pros</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">36</div>
-              <div className="text-gray-300 text-sm">States Covered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
-              <div className="text-gray-300 text-sm">Years Experience</div>
-            </div>
+            {stats.map((stat) => (
+              <div className="text-center" key={stat.label}>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  <StatCounter value={stat.value} suffix={stat.suffix} duration={3000}/>
+                </div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
