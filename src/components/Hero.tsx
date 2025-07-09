@@ -45,8 +45,14 @@ const Hero = () => {
             </a>
             
             <button className="group bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center space-x-2">
-              <Play className="h-5 w-5" />
-              <span>Watch Demo</span>
+              <a href="https://m.youtube.com/@RaphealIdowu_MediaBro/streams"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
+              >
+                <Play className="h-5 w-5" />
+                <span>Watch Demo</span>
+              </a>
             </button>
           </div>
 
